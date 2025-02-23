@@ -225,9 +225,9 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/smkim/.pub-cache/hosted/pub.dev/flutter_lints-5.0.0",
+      "rootUri": "file:///Users/smkim/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "2.19"
     },
     {
       "name": "flutter_plugin_android_lifecycle",
@@ -339,9 +339,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/smkim/.pub-cache/hosted/pub.dev/lints-5.1.1",
+      "rootUri": "file:///Users/smkim/.pub-cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.0"
     },
     {
       "name": "matcher",
@@ -656,13 +656,13 @@
       "languageVersion": "3.5"
     },
     {
-      "name": "faber_concert_01",
+      "name": "faber_concert_main",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-02-23T03:30:50.997432Z",
+  "generated": "2025-02-23T08:01:50.247737Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/smkim/Documents/Flutter_SDK/flutter",

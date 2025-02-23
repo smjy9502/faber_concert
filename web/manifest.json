@@ -1,6 +1,6 @@
 {
-    "name": "faber_concert_01",
-    "short_name": "faber_concert_01",
+    "name": "faber_concert_main",
+    "short_name": "faber_concert_main",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
