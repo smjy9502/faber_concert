@@ -1,0 +1,111 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-faberconcert01-dev-4d361-authRole",
+      "UnauthRoleArn": "arn:aws:iam::145023132658:role/amplify-faberconcert01-dev-4d361-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::145023132658:role/amplify-faberconcert01-dev-4d361-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-faberconcert01-dev-4d361-deployment",
+      "UnauthRoleName": "amplify-faberconcert01-dev-4d361-unauthRole",
+      "StackName": "amplify-faberconcert01-dev-4d361",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:145023132658:stack/amplify-faberconcert01-dev-4d361/01a2d2c0-f0f0-11ef-a1d4-06e40d609cb3",
+      "AmplifyAppId": "d3cwn1f2zhjswe"
+    }
+  },
+  "auth": {
+    "faberconcert01bc940932": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-faberconcert01-dev-4d361-deployment/amplify-cfn-templates/auth/faberconcert01bc940932-cloudformation-template.json",
+        "logicalId": "authfaberconcert01bc940932"
+      },
+      "lastPushTimeStamp": "2025-02-22T09:04:23.189Z",
+      "output": {
+        "UserPoolId": "ap-northeast-2_Les9ViwaV",
+        "AppClientIDWeb": "643jp7ejh2g97ig7up8327angq",
+        "AppClientID": "1c143a687vojmjjn6vchkgp5fj",
+        "IdentityPoolId": "ap-northeast-2:dfdbea67-a00c-4f2e-b978-3582d240ed82",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:145023132658:userpool/ap-northeast-2_Les9ViwaV",
+        "IdentityPoolName": "faberconcert01bc940932_identitypool_bc940932__dev",
+        "UserPoolName": "faberconcert01bc940932_userpool_bc940932"
+      },
+      "lastPushDirHash": "p54WCrsysa2rIoecBCil5X9c+Kw="
+    }
+  },
+  "function": {
+    "S3Triggerd3ac7053": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "lastBuildTimeStamp": "2025-02-22T09:02:19.388Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2025-02-22T09:02:19.430Z",
+      "distZipFilename": "S3Triggerd3ac7053-57625970547634616f6c-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-faberconcert01-dev-4d361-deployment",
+        "s3Key": "amplify-builds/S3Triggerd3ac7053-57625970547634616f6c-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-faberconcert01-dev-4d361-deployment/amplify-cfn-templates/function/S3Triggerd3ac7053-cloudformation-template.json",
+        "logicalId": "functionS3Triggerd3ac7053"
+      },
+      "lastPushTimeStamp": "2025-02-22T09:04:23.189Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::145023132658:role/S3Triggerd3ac7053LambdaRoled3ac7053-dev",
+        "Region": "ap-northeast-2",
+        "Arn": "arn:aws:lambda:ap-northeast-2:145023132658:function:S3Triggerd3ac7053-dev",
+        "Name": "S3Triggerd3ac7053-dev",
+        "LambdaExecutionRole": "S3Triggerd3ac7053LambdaRoled3ac7053-dev"
+      },
+      "lastPushDirHash": "90BJABzNrSBs0Iu7dmAtNHyJGLw="
+    }
+  },
+  "storage": {
+    "faber1a": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggerd3ac7053",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2025-02-22T09:04:23.189Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-faberconcert01-dev-4d361-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storagefaber1a"
+      },
+      "output": {
+        "BucketName": "faberconcert1a4d361-dev",
+        "Region": "ap-northeast-2"
+      },
+      "lastPushDirHash": "/Pupoyu1Mqjz4gYpPcxkXTAkyK8="
+    }
+  }
+}
