@@ -4,15 +4,11 @@ frontend:
     preBuild:
       commands:
         - npm install -g @aws-amplify/cli
-        - yum update -y
-        - yum install -y curl unzip xz tar
-        - curl -m 900 -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.5-stable.tar.xz
-        - xz -d flutter_linux_3.10.0-stable.tar.xz
-        - tar xf flutter_linux_3.10.0-stable.tar
-        - git config --global --add safe.directory /codebuild/output/src*/src/faber_concert/flutter
+        - npm install -g flutter
         - export PATH="$PATH:`pwd`/flutter/bin"
         - flutter precache
         - flutter --version
+        - flutter doctor -v
     build:
       commands:
         - flutter build web --release
