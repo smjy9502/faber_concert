@@ -1,16 +1,12 @@
-version: 1
+version: 1.0
 frontend:
   phases:
     preBuild:
       commands:
         - npm install -g @aws-amplify/cli
-        - curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.19.0-stable.tar.xz
-        - tar xf flutter_linux_3.19.0-stable.tar.xz
-        - export PATH="$PATH:`pwd`/flutter/bin"
-        - flutter precache
-        - flutter --version
-        - flutter doctor -v
-        - flutter upgrade
+        - flutter pub get
+        - flutter pub upgrade
+        - flutter clean
     build:
       commands:
         - flutter build web --release
@@ -19,6 +15,4 @@ frontend:
     files:
       - '**/*'
   cache:
-    paths:
-      - node_modules/**/*
-      - flutter
+    paths: []

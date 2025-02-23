@@ -1,14 +1,9 @@
 # This is a generated file; do not edit or check into version control.
-amplify_auth_cognito=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_auth_cognito-0.6.14/
-amplify_auth_cognito_android=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_auth_cognito_android-0.6.14/
-amplify_auth_cognito_ios=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_auth_cognito_ios-0.6.14/
-amplify_core=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_core-0.6.14/
-amplify_flutter=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_flutter-0.6.14/
-amplify_flutter_android=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_flutter_android-0.6.14/
-amplify_flutter_ios=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_flutter_ios-0.6.14/
-amplify_storage_s3=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_storage_s3-0.6.14/
-amplify_storage_s3_android=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_storage_s3_android-0.6.14/
-amplify_storage_s3_ios=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_storage_s3_ios-0.6.14/
+amplify_analytics_pinpoint=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_analytics_pinpoint-1.7.1/
+amplify_auth_cognito=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_auth_cognito-1.7.0/
+amplify_db_common=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_db_common-0.3.5/
+amplify_secure_storage=/Users/smkim/.pub-cache/hosted/pub.dev/amplify_secure_storage-0.4.4/
+device_info_plus=/Users/smkim/.pub-cache/hosted/pub.dev/device_info_plus-9.1.2/
 file_selector_linux=/Users/smkim/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2/
 file_selector_macos=/Users/smkim/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+2/
 file_selector_windows=/Users/smkim/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4/
@@ -26,6 +21,7 @@ image_picker_ios=/Users/smkim/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.12+
 image_picker_linux=/Users/smkim/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.1+1/
 image_picker_macos=/Users/smkim/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.1+2/
 image_picker_windows=/Users/smkim/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.1+1/
+package_info_plus=/Users/smkim/.pub-cache/hosted/pub.dev/package_info_plus-4.2.0/
 path_provider=/Users/smkim/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
 path_provider_android=/Users/smkim/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
 path_provider_foundation=/Users/smkim/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/

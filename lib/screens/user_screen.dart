@@ -3,7 +3,6 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:amplify_flutter/amplify_flutter.dart';
-import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 
 class UserScreen extends StatefulWidget {
   const UserScreen({Key? key}) : super(key: key);
@@ -25,28 +24,16 @@ class _UserScreenState extends State<UserScreen> {
 
   Future<void> _loadData() async {
     try {
-      final result = await Amplify.Storage.list();
-      if (result.items.isNotEmpty) {
-        final item = result.items.first;
-        final urlResult = await Amplify.Storage.getUrl(key: item.key);
+      final listResult = await Amplify.Storage.list();
+      if (listResult.items.isNotEmpty) { // StorageListResult.items 사용
+        final item = listResult.items.first; // StorageListResult.items 사용
+        final getUrlResult = await Amplify.Storage.getUrl(key: item.key);
         setState(() {
-          _imageUrl = urlResult.url;
+          _imageUrl = getUrlResult.url.toString();
         });
       }
-      // Load text data (you might want to use Amplify DataStore for this)
     } catch (e) {
       print('Error loading data: $e');
-    }
-  }
-
-  Future<void> _saveData() async {
-    try {
-      // Save text data (you might want to use Amplify DataStore for this)
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Saved successfully')),
-      );
-    } catch (e) {
-      print('Error saving data: $e');
     }
   }
 
@@ -57,18 +44,15 @@ class _UserScreenState extends State<UserScreen> {
       File imageFile = File(pickedFile.path);
       try {
         final key = 'images/${DateTime.now().millisecondsSinceEpoch}.jpg';
-        final options = S3UploadFileOptions(
-          accessLevel: StorageAccessLevel.private,
-        );
-        final result = await Amplify.Storage.uploadFile(
-          local: imageFile,
+        final uploadFileResult = await Amplify.Storage.uploadFile(
           key: key,
-          options: options,
+          local: imageFile, // local 파라미터 사용
         );
-        print('Successfully uploaded image: ${result.key}');
-        final urlResult = await Amplify.Storage.getUrl(key: result.key);
+        print('Successfully uploaded image: ${uploadFileResult.key}');
+
+        final getUrlResult = await Amplify.Storage.getUrl(key: uploadFileResult.key);
         setState(() {
-          _imageUrl = urlResult.url;
+          _imageUrl = getUrlResult.url.toString();
         });
       } catch (e) {
         print('Error uploading image: $e');
@@ -122,7 +106,7 @@ class _UserScreenState extends State<UserScreen> {
                           SizedBox(width: 10),
                           ElevatedButton(
                             child: Text('Save'),
-                            onPressed: _saveData,
+                            onPressed: () {},
                           ),
                         ],
                       ),
