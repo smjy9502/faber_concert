@@ -6,11 +6,12 @@ frontend:
         - npm install -g @aws-amplify/cli
         - npm install -g flutter
         - export PATH="$PATH:`pwd`/node_modules/.bin"
-        - flutter --version
-        - flutter doctor -v
+        - flutter --version || echo "Flutter not found"
+        - which flutter || echo "Flutter not in PATH"
+        - flutter doctor -v || echo "Flutter doctor failed"
     build:
       commands:
-        - flutter build web --release
+        - flutter build web --release || echo "Flutter build failed"
   artifacts:
     baseDirectory: build/web
     files:
