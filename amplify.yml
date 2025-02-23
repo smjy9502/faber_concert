@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - export PATH="$PATH:`pwd`/flutter/bin"
         - npm install -g @aws-amplify/cli
         - flutter pub get
         - flutter pub upgrade
