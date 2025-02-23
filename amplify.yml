@@ -3,7 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
-        - apt-get update && apt-get install -y curl unzip xz-utils zip libglu1-mesa
+        - yum update -y
+        - yum install -y curl unzip xz tar
         - curl -sSL https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.10.0-stable.tar.xz | tar xf -
         - export PATH="$PATH:`pwd`/flutter/bin"
         - flutter precache
@@ -15,3 +16,6 @@ frontend:
     baseDirectory: build/web
     files:
       - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
