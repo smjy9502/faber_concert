@@ -4,7 +4,8 @@ frontend:
     preBuild:
       commands:
         - npm install -g @aws-amplify/cli
-        - apt-get update && apt-get install -y curl unzip xz-utils
+        - yum update -y
+        - yum install -y curl unzip
         - curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.10.0-stable.tar.xz
         - tar xf flutter_linux_3.10.0-stable.tar.xz
         - export PATH="$PATH:`pwd`/flutter/bin"
