@@ -4,7 +4,7 @@ frontend:
     preBuild:
       commands:
         - npm install -g @aws-amplify/cli
-        - yum install -y curl tar # Amazon Linux에 맞는 패키지 관리자 사용
+        - sudo yum install -y curl tar # Amazon Linux에 맞는 패키지 관리자 사용
         - curl -sSL https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.10.6-stable.tar.xz -o flutter.tar.xz
         - tar xf flutter.tar.xz
         - export PATH="$PATH:/Users/smkim/Documents/Flutter_SDK/flutter/bin"
