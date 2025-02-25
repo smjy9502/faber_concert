@@ -3,8 +3,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - export PATH="$PATH:/Users/smkim/Documents/Flutter_SDK/flutter/bin"
         - npm install -g @aws-amplify/cli
+        - apt-get update && apt-get install -y curl unzip xz-utils zip libglu1-mesa
+        - curl -sSL https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.10.6-stable.tar.xz | tar xJ
+        - export PATH="$PATH:/Users/smkim/Documents/Flutter_SDK/flutter/bin"
+        - flutter precache
         - flutter pub get
         - flutter pub upgrade
         - flutter clean
@@ -16,4 +19,6 @@ frontend:
     files:
       - '**/*'
   cache:
-    paths: []
+    paths:
+      - node_modules/**/*
+      - flutter/**/*
