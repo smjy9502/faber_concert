@@ -177,9 +177,9 @@
     },
     {
       "name": "drift",
-      "rootUri": "file:///Users/smkim/.pub-cache/hosted/pub.dev/drift-2.14.1",
+      "rootUri": "file:///Users/smkim/.pub-cache/hosted/pub.dev/drift-2.25.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "fake_async",
@@ -842,7 +842,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-02-25T08:34:43.832590Z",
+  "generated": "2025-02-25T09:13:09.353673Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/smkim/Documents/Flutter_SDK/flutter",
